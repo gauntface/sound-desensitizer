@@ -9,6 +9,12 @@ function uncaughtError {
   exit $?
 }
 
+function initTempDir() {
+    TEMP_DIR="$(mktemp -d)"
+    ERROR_LOG="${TEMP_DIR}/sound-desensitizer-install-err.log"
+}
+
+
 function installNode() {
   # Install Node and NPM - https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
   echo -e "📦  Installing Node.js..."
@@ -28,7 +34,7 @@ function installFFmpeg() {
 
 function getSrcCode() {
   echo -e "📦  Getting Source Code..."
-  if [ ! -f ~/sound-desensitizer/ ]; then
+  if [ ! -d ~/sound-desensitizer/ ]; then
     git clone https://github.com/gauntface/sound-desensitizer.git ~/sound-desensitizer/
   fi
   echo -e "\n\t✅  Done\n"
@@ -50,9 +56,12 @@ function setupCron() {
 # -e means 'enable interpretation of backslash escapes'
 echo -e "\n📓  Installing sound desensitizer\n"
 
-installNode
+initTempDir
 
 installFFmpeg
+
+installNode
+
 
 getSrcCode
 
