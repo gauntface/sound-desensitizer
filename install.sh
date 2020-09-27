@@ -49,7 +49,7 @@ function installNPMDeps() {
 
 function setupCron() {
   echo -e "📦  Setting up cron..."
-  sudo cp ./sound-desensitize.cronjob /etc/cron.d/sound-desensitize.cronjob
+  sudo cp ./sound-desensitizer.cronjob /etc/cron.d/sound-desensitizer
   echo -e "\n\t✅  Done\n"
 }
 
