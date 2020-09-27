@@ -1,0 +1,8 @@
+{
+  "name": "sound-desensitizer",
+  "main": "main.js",
+  "scripts": {},
+  "dependencies": {
+    "meow": "^7.1.1"
+  }
+}
