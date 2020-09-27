@@ -6,5 +6,5 @@ to desensitize pets to certain sounds.
 ## Install
 
 ```
-sudo apt-get install curl && bash <(curl -s "https://raw.githubusercontent.com/gauntface/sound-desensitizer/master/install.sh?$(date +%s)")
+sudo apt-get install curl && bash <(curl -s "https://raw.githubusercontent.com/gauntface/sound-desensitizer/master/install.sh?$(date +%s)" -H 'Cache-Control: no-cache')
 ```
