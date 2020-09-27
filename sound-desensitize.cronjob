@@ -2,4 +2,4 @@
 
 SHELL=/bin/sh
 PATH=/usr/bin:/bin:/sbin:/usr/local/go/bin:/home/pi/.go/path/bin
-* * * * * pi node /home/pi/sound-desensitize --mp3=doorbell.mp3 --max_timeout=2 > /home/pi/mw-label-server-logs.txt 2>&1
+* * * * * pi node /home/pi/sound-desensitizer/main.js --mp3=doorbell.mp3 --max_timeout=2 > /home/pi/sound-desensitizer-logs.txt 2>&1
