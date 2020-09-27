@@ -28,7 +28,9 @@ function installFFmpeg() {
 
 function getSrcCode() {
   echo -e "📦  Getting Source Code..."
-  git clone https://github.com/gauntface/sound-desensitizer.git ~/sound-desensitizer/
+  if [ ! -f ~/sound-desensitizer/ ]; then
+    git clone https://github.com/gauntface/sound-desensitizer.git ~/sound-desensitizer/
+  fi
   echo -e "\n\t✅  Done\n"
 }
 
