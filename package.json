@@ -3,6 +3,6 @@
   "main": "main.js",
   "scripts": {},
   "dependencies": {
-    "meow": "^7.1.1"
+    "meow": "^11.0.0"
   }
 }
